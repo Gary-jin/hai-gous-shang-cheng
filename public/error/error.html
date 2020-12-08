@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="maximum-scale=1,minimum-scale=1,user-scalable=0,width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1751490_whvaywkcyv.css">
+  <title>error</title>
+  <script src="../js/vue.min.js"></script>
+  <script src="../js/mixin.js"></script>
+  <link href="../css/error.css" rel="stylesheet">
+</head>
+
+<body>
+  <div v-cloak id="app">
+    <page ref="page"></page>
+  </div>
+  <script src="../js/error.js"></script>
+</body>
+
+</html>
+<script>// Apicloud initialize
+  apiready = function () {
+    Vue.prototype.$ac = api; // Vue global apicloud API
+    window.vm = new Vue({
+      el: '#app',
+      components: { page: window.pageVue }
+    });
+  };</script>

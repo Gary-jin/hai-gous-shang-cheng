@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0,viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no,email=no,date=no,address=no" />
+  <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_2089314_8gbahb45m7g.css"> -->
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/common.css">
+  <title><%= htmlWebpackPlugin.options.name %></title>
+
+  <% if(process.env.NODE_ENV === 'development') { %>
+  <script type="text/javascript" src="js/vue.js"></script>
+  <% }else {%>
+  <script type="text/javascript" src="js/vue.min.js"></script>
+  <% } %>
+
+  <script type="text/javascript" src="js/aes.js"></script>
+  <script type="text/javascript" src="js/rsa.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+  <script type="text/javascript" src="js/fastclick.min.js"></script>
+  <!-- <script type="text/javascript" src="js/const.js"></script> -->
+</head>
+
+<body>
+  <div v-cloak id="app">
+    <page ref="page" /><!-- Vue here -->
+  </div>
+</body>
+
+</html>
+<script type="text/javascript">
+  // Apicloud initialize
+  var vm;
+  apiready = function () {
+    Vue.prototype.$ac = api; // Vue global apicloud API
+    window.vm = new Vue({
+      el: '#app',
+      components: { page: window.pageVue }
+    });
+  };
+
+  <% if (process.env.NODE_ENV === 'development') { %>
+    // Browser initialize
+    setTimeout(function () {
+      if (window.vm === undefined) {
+        window.vm = new Vue({
+          el: '#app',
+          components: { page: window.pageVue }
+        });
+      }
+    }, 1000);
+  <% } %>
+
+</script>
+
+<!-- <script type="text/javascript">
+  // var htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+  // var htmlDom = document.getElementsByTagName('html')[0];
+  // htmlDom.style.fontSize = htmlWidth  /3.75 +'px';
+  var vm;
+
+  // Apicloud initialize
+  apiready = function () {
+    Vue.prototype.$ac = api; // Vue global apicloud API
+    window.vm = new Vue({
+      el: '#app',
+      components: { page: window.pageVue }
+    });
+  };
+
+  // Browser initialize
+  setTimeout(function () {
+    if (vm === undefined) {
+      window.vm = new Vue({
+        el: '#app',
+        components: { page: window.pageVue }
+      });
+    }
+  }, 500);
+</script> -->

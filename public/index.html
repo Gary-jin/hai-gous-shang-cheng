@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+	<meta name="format-detection" content="telephone=no,email=no,date=no,address=no" />
+	<title>index</title>
+</head>
+
+<body></body>
+
+</html>
+<script type="text/javascript">
+	var url = '<%= process.env.VUE_APP_ENTRY_PRD %>'
+	var leftPage = '<%= process.env.VUE_APP_ENTRY_PRD_NAV %>'
+		<% if (process.env.NODE_ENV === 'development') { %>
+			url = '<%= process.env.VUE_APP_ENTRY_DEV %>'
+			leftPage = '<%= process.env.VUE_APP_ENTRY_DEV_NAV %>'
+				<% } %>
+
+					apiready = function() {
+						api.openWin({
+							name: 'basic-home',
+							url: url,
+							slidBackEnabled: false,
+							useWKWebView:true,
+							animation: {
+								type: "none"
+							}
+						});
+						// api.openDrawerLayout({
+						//   name: 'home',
+						//   url: url,
+						//   animation: {
+						//     type: 'none'
+						//   },
+						//   leftPane: {
+						//     name: 'leftPage',
+						//     url: leftPage
+						//   }
+						// });
+						// api.openSlidLayout({
+						// 	type: 'left',
+						// 	scrollEnabled: false,
+						// 	slidPaneStyle: {
+						// 		leftEdge: '80%',
+						// 	},
+						// 	fixedPane: {
+						// 		name: 'leftPage',
+						// 		url: leftPage, //'slid/homefixed.html',
+						// 		bgColor: '#fff'
+
+						// 	},
+						// 	slidPane: {
+						// 		name: 'home',
+						// 		url: url,
+						// 	},
+						// }, function (ret) {
+						// 	//console.log(JSON.stringify(ret));
+						// });
+					};
+</script>

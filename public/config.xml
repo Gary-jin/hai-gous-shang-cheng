@@ -1,0 +1,122 @@
+ <widget id="A6155840425470" version="0.0.1">
+ 	<name>海购商城</name>
+ 	<description>
+ 		Example For APICloud-cli + Vue + Vue-cli3.
+ 	</description>
+
+ 	<author email="rotels@qq.com" href="https://github.com/viarotel">
+ 		Marlon
+ 	</author>
+
+ 	<content src="./index.html" />
+
+ 	<access origin="*" />
+
+ 	<preference name="pageBounce" value="false" />
+
+ 	<preference name="appBackground" value="rgba(255,255,255,1)" />
+
+ 	<preference name="windowBackground" value="rgba(255,255,255,1)" />
+
+ 	<preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)" />
+
+ 	<preference name="hScrollBarEnabled" value="false" />
+
+ 	<preference name="vScrollBarEnabled" value="false" />
+
+ 	<preference name="autoLaunch" value="true" />
+
+ 	<preference name="fullScreen" value="false" />
+
+ 	<preference name="autoUpdate" value="true" />
+
+ 	<preference name="smartUpdate" value="false" />
+
+ 	<preference name="debug" value="false" />
+
+ 	<preference name="statusBarAppearance" value="true" />
+
+ 	<permission name="readPhoneState" />
+
+ 	<permission name="camera" />
+
+ 	<permission name="record" />
+
+ 	<permission name="location" />
+
+ 	<permission name="fileSystem" />
+
+ 	<permission name="internet" />
+
+ 	<permission name="bootCompleted" />
+
+ 	<permission name="hardware" />
+
+	<preference name="useWKWebView" value="true" />
+
+ 	<preference name="querySchemes" value="tmall,tbopen,jdlogin,openapp.jdmobile,wechat,weixin,alipay,alipayshare" />
+	 <!-- <preference name="querySchemes" value="alipay,alipayshare," /> -->
+	<!--百度地图bMap-->
+	<!-- <feature name="bMap">
+		<param name="android_api_key" value="InQOOc97Y7cNcvBTF49VRt3krFfWSbhR" />
+		<param name="ios_api_key" value="2zv65DckCylGcgcTwwd1MtS3v3vxuaSq" />
+	</feature> -->
+ 	<!-- 微信分享 -->
+ 	<feature name="wxPlus">
+ 		<param name="urlScheme" value="wxe4a6b1f44d756a40" />
+ 		<param name="apiKey" value="wxe4a6b1f44d756a40" />
+ 		<param name="apiSecret" value="f7c5402fc21c29543997c15e336bae8f" />
+		 <param name="universalLink" value="https://ios.haigousc.cn/sdksample/"/>
+ 	</feature>
+ 	<feature name="wxPayPlus">
+ 		<param name="urlScheme" value="wxe4a6b1f44d756a40" />
+ 		<param name="apiKey" value="wxe4a6b1f44d756a40" />
+ 		<param name="apiSecret" value="f7c5402fc21c29543997c15e336bae8f" />
+		<param name="universalLink" value="https://ios.haigousc.cn/sdksample/"/>
+ 	</feature>
+ 	<!-- QQ 分享 -->
+ 	<!-- <feature name="QQPlus">
+ 		<param name="urlScheme" value="tencent1109598334" />
+ 		<param name="apiKey" value="1109598334" />
+ 	</feature> -->
+ 	<!-- 微信支付 -->
+ 	<!-- 支付宝支付 -->
+ 	<!-- <feature name="aliPayPlus">
+ 		<param name="urlScheme" value="AliPayPlusA6155840425470" />
+ 	</feature> -->
+ 	<feature name="aliPayTradePlus">
+ 		<param name="urlScheme" value="aliPayTradePlusA6155840425470" />
+ 	</feature>
+	<!-- 极光推送 -->
+	 <!-- <feature name="ajpush"> -->
+		 <!-- <param name="app_key" value="36195e3d6822b78fd5e63562"/> -->
+		 <!-- <param name="app_key" value="900c6dd63ef7a007511c475f"/>
+		 <param name="channel" value="tiaowubaJpush"/>
+	 </feature> -->
+	<!-- <feature name="jdapp">
+		<param name="urlScheme" value="sdkback831383fe3eae1a8f11a6079cdc6737cc"/>
+		<param name="back_id" value="JD2018xxxxxxxxxxx"/>
+		<param name="appkey" value="831383fe3eae1a8f11a6079cdc6737cc"/>
+		<param name="secretKey" value="90f511602a7c4d958d40b61c5b93dc63"/>
+	</feature> -->
+
+	<!--  阿里百川 配置参数-->
+ 	<feature name="alibaichuan">
+		<param name="urlScheme" value="tbopen31860717" />
+ 	</feature>
+
+
+	<feature name="jdapp"> 
+		<param name="urlScheme" value="sdkback1a93fb137e77fb8efbe0cea50cbff258" />
+		<param name="ios_appkey" value="1a93fb137e77fb8efbe0cea50cbff258" />
+		<param name="ios_secretKey" value="1a93fb137e77fb8efbe0cea50cbff258" />
+		<param name="android_appkey" value="1a93fb137e77fb8efbe0cea50cbff258" />
+		<param name="android_secretKey" value="5ae7036366144000b6b63c8261b84c67" />
+	</feature>
+	<!-- 地址路劲 -->
+	<!-- <preference name="urlScheme" value="com.tiaowuba.app.auth" /> -->
+	
+	<!--  -->
+	<preference name="appCertificateVerify" value="false" />
+
+ </widget>
